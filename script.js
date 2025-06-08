@@ -150,9 +150,9 @@ document.getElementById('contactForm').addEventListener('submit', async function
     };
 
     try {
-       const response = await fetch('http://127.0.0.1:3000/send-message', {
+       const response = await fetch('https://resume-1-0yem.onrender.com/send-message', {
   method: 'POST',
-    method: 'POST',
+  
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(formData)
 });
