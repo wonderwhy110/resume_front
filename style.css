@@ -697,8 +697,11 @@ span {
 }
 @media (max-width: 768px) {
   .carousel img {
-    min-width: 100%;
+    width: 100%;
     height: auto;
+    min-width: unset; /* очень важно — убирает "850px" */
+    flex-shrink: 0;
+    object-fit: cover;
   }
 
   .carousel {
@@ -706,7 +709,6 @@ span {
     padding: 0;
   }
 }
-
 
 
 .carousel-btn {
