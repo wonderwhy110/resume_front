@@ -699,7 +699,7 @@ span {
   .carousel img {
     width: 100%;
     height: auto;        /* сохранить пропорции */
-    object-fit: contain; /* покажет всё изображение без обрезки */
+    object-fit: cover; /* покажет всё изображение без обрезки */
     min-width: unset;
     flex-shrink: 0;
   }
