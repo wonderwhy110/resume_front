@@ -698,7 +698,7 @@ span {
 @media (max-width: 768px) {
   .carousel img {
     width: 100%;
-    aspect-ratio: 16 / 13;   /* соотношение ширины к высоте */
+    aspect-ratio: 17 / 10;   /* соотношение ширины к высоте */
     object-fit: cover;
     min-width: unset;
     flex-shrink: 0;
