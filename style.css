@@ -700,7 +700,13 @@ span {
     min-width: 100%;
     height: auto;
   }
+
+  .carousel {
+    gap: 0;
+    padding: 0;
+  }
 }
+
 
 
 .carousel-btn {
