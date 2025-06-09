@@ -698,8 +698,8 @@ span {
 @media (max-width: 768px) {
   .carousel img {
     width: 100%;
-    height: auto;        /* сохранить пропорции */
-    object-fit: cover; /* покажет всё изображение без обрезки */
+    aspect-ratio: 16 / 9;   /* соотношение ширины к высоте */
+    object-fit: cover;
     min-width: unset;
     flex-shrink: 0;
   }
@@ -707,8 +707,8 @@ span {
   .carousel {
     gap: 0;
     padding: 0;
-    width: 100%;         /* на всякий случай */
-    height: auto;        /* чтобы высота подстраивалась */
+    width: 100%;
+    /* высота автоматически подстроится по img */
   }
 }
 
