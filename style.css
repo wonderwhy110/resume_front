@@ -200,7 +200,12 @@ span {
     background-attachment: fixed;
     background-size: cover;
     opacity: 0.4;
-    z-index: -1; /* Отправляем фон под содержимое */
+    z-index: -1;
+}
+@media (max-width: 768px) {
+    .about::before {
+        background-attachment: scroll;
+    }
 }
 
 .about-img img {
