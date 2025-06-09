@@ -179,12 +179,14 @@ span {
 /*-------------- ABOUT --------------*/
 
 .about {
-    position: relative; /* Необходимо для позиционирования псевдоэлемента */
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 2rem;
-    /* Остальные стили для содержимого */
+    padding: 5rem 2rem; /* или подстрой по содержанию */
+    overflow: hidden; /* скрыть фон за пределами секции */
+    z-index: 1;
 }
 
 .about::before {
@@ -192,16 +194,17 @@ span {
     position: absolute;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
+    width: 100%;
+    height: 100%;
     background-image: url(images/miet.jpg);
     background-repeat: no-repeat;
-    background-position: center center;
-    background-attachment: fixed;
+    background-position: center;
     background-size: cover;
     opacity: 0.4;
     z-index: -1;
+    pointer-events: none;
 }
+
 @media (max-width: 768px) {
     .about::before {
         background-attachment: scroll;
