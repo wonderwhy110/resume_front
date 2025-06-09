@@ -699,9 +699,8 @@ span {
   .carousel img {
     width: 768px;
     height: 400px;
-    min-width: unset; /* очень важно — убирает "850px" */
-    flex-shrink: 0;
-    object-fit: cover;
+ 
+  
   }
 
   .carousel {
