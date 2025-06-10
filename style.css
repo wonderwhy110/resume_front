@@ -314,7 +314,9 @@ span {
 }
 @media (max-width: 1000px) {
     .portfolio h2 {
-          margin-top: 2rem;
+       
+          margin: 0 0 15px 0;
+        padding: 0 15px;
 
     }
 }
@@ -711,7 +713,8 @@ span {
     gap: 0;
     padding: 0;
     width: 100%;
-    height: auto; /* Важно! */
+    height: 70vh; /* Важно! */
+      
   }
 
   .carousel img {
