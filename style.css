@@ -677,7 +677,7 @@ span {
   position: relative;
   max-width: 1000px;
   margin: 0 auto;
-  overflow: hidden;
+  overflow: hidden; /* Можно оставить, но проверим */
 }
 
 .carousel {
@@ -695,20 +695,27 @@ span {
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
+
 @media (max-width: 768px) {
-  .carousel img {
-    width: 100%;
-    aspect-ratio: 3 / 4;   /* соотношение ширины к высоте */
-    object-fit: cover;
-    min-width: unset;
-    flex-shrink: 0;
+  .carousel-container {
+    overflow: visible; /* Разрешаем содержимому выходить за границы */
   }
 
   .carousel {
     gap: 0;
     padding: 0;
     width: 100%;
-    /* высота автоматически подстроится по img */
+    height: auto; /* Важно! */
+  }
+
+  .carousel img {
+    width: 100%;
+    height: auto; /* Сбрасываем фиксированную высоту */
+    aspect-ratio: 3/4; /* Теперь должно работать */
+    min-width: unset;
+    flex-shrink: 0;
+    border-radius: 0; /* Опционально: убрать скругление для мобилок */
+    box-shadow: none; /* Опционально: убрать тень */
   }
 }
 
