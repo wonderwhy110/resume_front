@@ -312,6 +312,12 @@ span {
 .portfolio h2 {
     margin-bottom: 5rem;
 }
+@media (max-width: 1000px) {
+    .portfolio h2 {
+          margin-bottom: 2rem;
+
+    }
+}
 
 .portfolio-container {
     display: grid;
@@ -698,7 +704,7 @@ span {
 
 @media (max-width: 768px) {
   .carousel-container {
-    overflow: visible; /* Разрешаем содержимому выходить за границы */
+    overflow: hidden; /* Разрешаем содержимому выходить за границы */
   }
 
   .carousel {
