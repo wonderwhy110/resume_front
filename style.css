@@ -314,7 +314,7 @@ span {
 }
 @media (max-width: 1000px) {
     .portfolio h2 {
-          margin-bottom: 2rem;
+          margin-top: 2rem;
 
     }
 }
