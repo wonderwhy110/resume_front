@@ -312,14 +312,6 @@ span {
 .portfolio h2 {
     margin-bottom: 5rem;
 }
-@media (max-width: 1000px) {
-    .portfolio h2 {
-       
-          margin: 0 0 15px 0;
-        padding: 0 15px;
-
-    }
-}
 
 .portfolio-container {
     display: grid;
@@ -685,48 +677,59 @@ span {
   position: relative;
   max-width: 1000px;
   margin: 0 auto;
-  overflow: hidden; /* Можно оставить, но проверим */
+  overflow: hidden;
+  padding: 20px 0;
+
 }
 
 .carousel {
   display: flex;
   transition: transform 0.5s ease;
-  gap: 15px;
-  padding: 10px 0;
+  box-sizing: border-box;
+  padding: 0 60px; /* Отступы для кнопок */
 }
 
 .carousel img {
-  flex-shrink: 0;
-  width: 850px;
-  height: 500px;
+  width: 100%; /* Ширина как в Flickity */
+  height: 500px; /* Фиксированная высота */
+  margin-right: 15px;
+  background: #8C8; /* Цвет фона как в примере */
   object-fit: cover;
   border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  flex-shrink: 0;
 }
 
-@media (max-width: 768px) {
-  .carousel-container {
-    overflow: hidden; /* Разрешаем содержимому выходить за границы */
-  }
+/* Псевдоэлемент для номера изображения (как в Flickity) */
+.carousel img::before {
+  content: attr(data-counter);
+  display: block;
+  text-align: center;
+  line-height: 400px;
+  font-size: 80px;
+  color: white;
+  background: rgba(0,0,0,0.3);
+}
 
-  .carousel {
-    gap: 0;
-    padding: 0;
-    width: 100%;
-    height: 70vh; /* Важно! */
-      
-  }
-
+@media (max-width: 480px) {
   .carousel img {
-    width: 80%;
-     /* Сбрасываем фиксированную высоту */
-    aspect-ratio: 4/3; /* Теперь должно работать */
-    min-width: unset;
-    flex-shrink: 0;
-    border-radius: 0; /* Опционально: убрать скругление для мобилок */
-    box-shadow: none; /* Опционально: убрать тень */
+    width: 90%;
+    height: 250px;
+    margin-right: 10px;
+  }
+  
+  .carousel-btn {
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+  }
+  
+  .carousel {
+    padding: 0 40px;
   }
 }
+
+
 
 
 .carousel-btn {
