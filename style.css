@@ -711,7 +711,7 @@ span {
   .carousel img {
     width: 100%;
     height: auto; /* Сбрасываем фиксированную высоту */
-    aspect-ratio: 3/4; /* Теперь должно работать */
+    aspect-ratio: 3/3; /* Теперь должно работать */
     min-width: unset;
     flex-shrink: 0;
     border-radius: 0; /* Опционально: убрать скругление для мобилок */
