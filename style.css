@@ -622,7 +622,7 @@ span {
 
 @media (max-width: 617px) {
     .portfolio h2 {
-        margin-bottom: 4rem;
+        margin-bottom: 2rem;
     }
 
     .portfolio-container {
@@ -761,18 +761,7 @@ span {
   right: 15px;
 }
 
-@media (max-width: 1000px) {
-  .carousel img {
-    min-width: 200px;
-    height: 150px;
-  }
-  
-  .carousel-btn {
-    width: 30px;
-    height: 30px;
-    font-size: 16px;
-  }
-}
+
  .email-container {
             position: relative;
             display: inline-block;
