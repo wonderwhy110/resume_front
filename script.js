@@ -114,17 +114,17 @@ ScrollReveal().reveal('.home-img, .services-container, .portfolio-box, .contact 
 ScrollReveal().reveal('.home-content h1, .about-img', { origin: 'left' });
 ScrollReveal().reveal('.home-content p, .about-content', { origin: 'right' });
 
-/*==================== typed js ====================
+/*==================== typed js ====================*/
 
 const typed = new Typed('.multiple-text', {
-    strings: ['Backend Developer', 'Frontend Developer', 'IT Marketing Specialist'],
+    strings: ['Backend Developer', 'Frontend Developer'],
     typeSpeed: 100,
     backSpeed: 100,
     backDelay: 1000,
     loop: true
 })
 
-*/
+
 
 
 /*==================== bot tg ====================*/
@@ -180,7 +180,8 @@ const result = await response.json();
 
 /*==================== email validation ====================*/
 
-const EMAIL_REGEXP = /^[a-zA-Z0–9+_.-]+@[a-zA-Z0–9.-]+$/;
+const EMAIL_REGEXP = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
 
 let emailInput = document.getElementById('email');
 
@@ -197,7 +198,7 @@ function validateEmail() {
 
 /*==================== phone number validation ====================*/
 
-const PHONE_REGEXP = /^[\d\+][\d\(\)\ -]{10,14}\d$/;
+const PHONE_REGEXP = /^\+?\d[\d()\s-]{9,14}\d$/;
 
 let phoneInput = document.getElementById('phone');
 
